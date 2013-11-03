@@ -7,14 +7,13 @@ Refrence: Ch7. Kak & Slaney http://www.slaney.org/pct/pct-toc.html
 
 Quickstart:
 
+# Generate test data
+```
 from pySART import pysart
 from skimage.transform import radon, iradon
 import phantom
 import numpy as np
 
-
-# Generate test data
-```
 def generate_phantom():
     theta = range(0,180)
     data = np.rot90(radon(phantom.phantom(n=100),theta=theta))
